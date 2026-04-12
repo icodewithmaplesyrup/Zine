@@ -56,3 +56,16 @@ All colors and fonts are in `constants/theme.ts`. The palette:
 3. **Flipbook Viewer** — `react-native-page-flip` or WebView + Turn.js for the published issue
 4. **Stripe Connect** — publisher onboarding + application fee on subscriptions
 5. **API Key Flow** — generate key on publisher creation, scope to `GET /v1/zines/:id`
+
+## Prototype Builder Script
+
+Use the script below to automatically assemble every tracked script file in the repository into a single prototype bundle for quick testing.
+
+```bash
+node scripts/build-prototype.mjs
+```
+
+Generated artifacts:
+
+- `prototype/combined-prototype.tsx` — concatenated source in dependency-aware order
+- `prototype/prototype-manifest.json` — metadata for what was included
